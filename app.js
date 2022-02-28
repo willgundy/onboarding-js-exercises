@@ -62,7 +62,7 @@ console.log(
 //    that checks if the year is a leap year, and returns the correct
 //    number of days for Feb. The default value for the year should be
 //    the current year
-function daysInMonth(month, year = '2021') {
+function daysInMonth(month, year = '2020') {
     if (month >= 1 && month <= 12) {
         return new Date(year, month, 0).getDate();
     } else {
