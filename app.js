@@ -62,7 +62,16 @@ console.log(
 //    that checks if the year is a leap year, and returns the correct
 //    number of days for Feb. The default value for the year should be
 //    the current year
-function daysInMonth() {
+function daysInMonth(month, year) {
+    const dayCountInMonthsNormalYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    const dayCountInMonthsLeapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let monthArrayElement = month - 1;
+    if (month >= 1 && month <= 12) {
+        return dayCountInMonthsLeapYear[monthArrayElement];
+    } else {
+        console.log('Please provide a month number between 1 and 12');
+        return;
+    }
 }
 console.log(`daysInMonth(2) === 29: ${daysInMonth(2) === 29}`);
 console.log(`daysInMonth(3) === 31: ${daysInMonth(3) === 31}`);
